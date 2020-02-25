@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+                var userName = 'Путин';
+                function showMessage(){
+                    userName = 'Меркаль'; // (1) присвоение во внешнию переменную 
+                    var message = 'Привет, я ' + userName;
+                    alert(message);
+            }
+            showMessage();
+          alert(userName); // Меркаль, значение внешний переменной именено функцией
+        </script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+                function showMessage(from, text){
+                    from = '**' + from + '**'; // (1), красиво оформили from
+                    alert(from + '\n\n' + text);
+            }
+           var from = 'Дмитрий Анатольевич Медведев', msg = 'Привет!'; // (2)
+           showMessage(from, msg); // значения будут скопилированы в параметры
+          alert(from); // перезаписать в строке (1) не повлияет на внешнюю преременную 
+        </script>
+    </body>
+</html>
