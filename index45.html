@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Самостоятельная работа 1</title>
+        <title>Самостоятельная работа 2</title>
     </head>
     <body>
         <script>
-                function myAge(){
-                    var age = prompt('Ваш возрост?');
-                }
-
-            function checkAge(){
-                if(myAge() > 18 ) 
-
-                return true;
+              function myAge() 
+            { 
+                var age = prompt('Ваш возрост?');
+                if (age == '' || age == ' ' || isNaN(age)) 
+            { 
+                alert('Ошибка ввода!!! Введите число!');
+                exit;
+            }
+                return age;
+            }
+                function checkAge() 
+            { 
+                if (myAge() > 18 ) 
+                    return true;
+               else
+             return confirm('Родители разрешили?');
+            }
+             if (checkAge())
+                  alert('Доступ разрешен');
             else
-                return confirm ('Родители разрешили?');
-
-        }
-            if(checkAge())
-             alert('Доступ разрешен');
-            else
-                alert('В доступе отказано');
+                  alert('В доступе отказано');
         </script>
     </body>
 </html>
