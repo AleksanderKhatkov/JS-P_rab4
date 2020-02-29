@@ -7,17 +7,22 @@
         <script>
               function myAge() 
             { 
-                var age = prompt('Ваш возрост?');
+                var age = prompt('Ваш возраст?');
                 if (age == '' || age == ' ' || isNaN(age)) 
             { 
                 alert('Ошибка ввода!!! Введите число!');
                 exit;
             }
+
+            if( age >200 || age <=0){
+              alert('Столько не живут');
+              exit;
+            }
                 return age;
             }
                 function checkAge() 
             { 
-                if (myAge() > 18 ) 
+                if (myAge() > 18) 
                     return true;
                else
              return confirm('Родители разрешили?');
